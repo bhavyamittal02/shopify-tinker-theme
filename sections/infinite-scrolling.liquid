@@ -1,0 +1,45 @@
+{{ 'infinite-scrolling.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'infinite-scrolling.js' | asset_url }}" defer></script>
+
+{% assign collection = section.settings.list %}
+{% paginate collection.products by 5 %}
+
+<div id="product-grid">
+  {% for product in collection.products %}
+    <div class="product-item">
+      <img
+        src="{{ product.featured_image | image_url }}"
+        alt="{{ product.title }}"
+        width="400"
+        height="400">
+    </div>
+  {% endfor %}
+</div>
+
+{% if paginate.next %}
+  <button
+    class="load-more"
+    data-next-page="{{ paginate.next.url }}">
+    Load More
+  </button>
+{% endif %}
+
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Infinite-Scrolling",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "list",
+      "label": "List"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Infinite-Scrolling"
+    }
+  ]
+}
+{% endschema %}

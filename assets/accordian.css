@@ -1,0 +1,16 @@
+.ans{
+    display:none;
+    text-align: center;
+    font-size: 15px;
+}
+.ques{
+    display : flex;
+    flex-direction : row;
+    font-size: 30px;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+.accordian-block{
+    padding : 10px;
+}

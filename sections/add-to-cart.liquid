@@ -1,0 +1,56 @@
+{{ 'add-to-cart.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'add-to-cart.js' | asset_url }}" defer></script>
+
+<div class="cart-container">
+  {% for block in section.blocks %}
+    <div class="product">
+      {% assign product = block.settings.product %}
+      <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" width="300px" height="auto">
+      <div class="product-card">
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.price | money }}</p>
+
+        <button class="btn1 btn" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+          {{ block.settings.btn1 }}
+        </button>
+      </div>
+    </div>
+    <button class="btn2 btn" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+      {{ block.settings.btn2 }}
+    </button>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Add-To-Cart",
+  "blocks": [
+    {
+      "name": "Add-To-Cart",
+      "type": "button",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "product"
+        },
+        {
+          "type": "text",
+          "id": "btn1",
+          "label": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn2",
+          "label": "Button"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Add-To-Cart"
+    }
+  ]
+}
+{% endschema %}

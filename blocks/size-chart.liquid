@@ -1,0 +1,27 @@
+<script src="{{ 'size-chart.js' | asset_url }}" defer></script>
+
+<button class="size-chart-btn">Size Chart</button>
+<dialog class="size-chart-modal">
+  <button class="close-btn">&times;</button>
+  <div class="size-chart-content">
+    <img src="{{ block.settings.size_image | image_url : width : 500 }}" alt="size-chart-image" width="500" height="500">
+  </div>
+</dialog>
+
+{% schema %}
+{
+  "name": "Size-Chart",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "size_image",
+      "label": "Size Chart Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Size-Chart"
+    }
+  ]
+}
+{% endschema %}

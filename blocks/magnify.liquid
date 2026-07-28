@@ -1,0 +1,14 @@
+{{ 'magnify.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'magnify.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+    "name": "Magnifying Effect",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Magnifying Effect"
+        }
+    ]
+}
+{% endschema %}

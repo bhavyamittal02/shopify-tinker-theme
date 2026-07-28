@@ -15,6 +15,7 @@
         "heading": {
           "type": "text",
           "name": "Title",
+          "disabled": true,
           "settings": {
             "text": "<h1>{{ closest.page.title }}</h1>",
             "width": "100%",
@@ -58,32 +59,16 @@
         "padding-block-end": 80
       }
     },
-    "infinite_scrolling_JKJFj8": {
+    "infinite_scrolling_9WPMpT": {
       "type": "infinite-scrolling",
-      "blocks": {
-        "list_kMNfrK": {
-          "type": "list",
-          "settings": {
-            "list": "products"
-          }
-        },
-        "list_DPzBd4": {
-          "type": "list",
-          "settings": {
-            "list": "womens-collection-1"
-          }
-        }
-      },
-      "block_order": [
-        "list_kMNfrK",
-        "list_DPzBd4"
-      ],
       "name": "Infinite-Scrolling",
-      "settings": {}
+      "settings": {
+        "list": "womens-collection-1"
+      }
     }
   },
   "order": [
     "main",
-    "infinite_scrolling_JKJFj8"
+    "infinite_scrolling_9WPMpT"
   ]
 }

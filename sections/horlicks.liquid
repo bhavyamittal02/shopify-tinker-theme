@@ -1,0 +1,78 @@
+{{ 'horlicks.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="{{ 'horlicks.js' | asset_url }}" defer></script>
+
+<div class="hero-grid-section">
+  <h2>{{ section.settings.heading }}</h2>
+  {% assign count = 0 %}
+
+  <div class="hero-grid">
+    {% for block in section.blocks %}
+      {% assign count = count | plus: 1 %}
+      <div class="hero-item {% if count == 1 %}large{% endif %}">
+        <img
+          src="{{ block.settings.desktop_image | image_url: width: 1200 }}"
+          alt=""
+          width=""
+          height=""
+        >
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="swiper heroSwiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <img
+            src="{{ block.settings.mobile_image | image_url: width: 800 }}"
+            alt=""
+            width=""
+            height=""
+          >
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Grid"
+    }
+  ]
+}
+{% endschema %}

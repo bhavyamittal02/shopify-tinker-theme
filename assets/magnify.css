@@ -1,0 +1,11 @@
+.product-media {
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+.product-media__image {
+    width: 100%;
+    height: 100%;
+    transition: transform .1s ease;
+    will-change: transform;
+}

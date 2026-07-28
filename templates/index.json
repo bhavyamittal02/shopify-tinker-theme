@@ -498,7 +498,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#B892C5",
+                "text_color": "#b892c5",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -520,7 +520,7 @@
           "static": true,
           "settings": {
             "product_card_gap": 0,
-            "background_color": "#B892C5",
+            "background_color": "#b892c5",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -602,7 +602,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#6B3597",
+                    "text_color": "#6b3597",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -628,11 +628,24 @@
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
-                    "text_color": "#6B3597",
+                    "text_color": "#6b3597",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "review_34ppVf": {
+                  "type": "review",
+                  "name": "t:names.product_review_stars",
+                  "settings": {
+                    "stars_style": "shaded",
+                    "show_number": true,
+                    "text_color": "#684671",
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "center"
                   },
                   "blocks": {}
                 },
@@ -654,6 +667,7 @@
               "block_order": [
                 "product_title_gH3cpy",
                 "price_anAima",
+                "review_34ppVf",
                 "swatches_eYcKAz"
               ]
             }
@@ -750,7 +764,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#6B3597",
+                "text_color": "#6b3597",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -775,7 +789,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#6B3597",
+                "text_color": "#6b3597",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -820,7 +834,7 @@
         "media_height": "50svh",
         "section_width": "page-width",
         "extend_media": true,
-        "background_color": "#B892C5",
+        "background_color": "#b892c5",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -883,7 +897,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#B892C5",
+                "text_color": "#b892c5",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -1030,7 +1044,7 @@
           "settings": {
             "alignment": "center",
             "gap": 8,
-            "background_color": "#B892C5",
+            "background_color": "#b892c5",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -1071,7 +1085,7 @@
                 "read_only": false,
                 "alignment": "left",
                 "show_alignment": false,
-                "text_color": "#6B3597",
+                "text_color": "#6b3597",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -1088,7 +1102,7 @@
                 "show_author": true,
                 "type_preset": "paragraph",
                 "alignment": "left",
-                "text_color": "#6B3597",
+                "text_color": "#6b3597",
                 "show_alignment": false,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
@@ -1109,7 +1123,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "text_color": "#6B3597",
+                "text_color": "#6b3597",
                 "padding-block-start": 8,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,

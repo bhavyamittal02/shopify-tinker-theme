@@ -29,6 +29,7 @@
     "type_case_h6": "none",
     "page_background_color": "{{ settings.color_palette.background }}",
     "page_width": "normal",
+    "transition_to_main_product": true,
     "badge_sale_background_color": "#A770D4",
     "badge_sale_text_color": "{{ settings.color_palette.background }}",
     "badge_sold_out_background_color": "#484C4D",
@@ -82,6 +83,20 @@
     "variant_button_radius": 100,
     "variant_button_width": "equal-width-buttons",
     "content_for_index": [],
+    "blocks": {
+      "13047258039897440615": {
+        "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "widget_type": "review-widget"
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_palette": {
       "background": "#ffffff",
       "foreground": "#000000",

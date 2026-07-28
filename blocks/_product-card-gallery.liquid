@@ -1,4 +1,5 @@
-
+{{ 'quick-view.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'quick-view.js' | asset_url }}" defer></script>
 
 {% assign product = closest.product %}
 
@@ -33,6 +34,31 @@
 {% endcapture %}
 
 {% render 'card-gallery', children: children %}
+
+<button class="quick-view-btn">Quick View</button>
+
+<dialog class="quick-view-modal">
+  <button class="close-btn">&times;</button>
+
+  <div class="quick-view-content">
+    <img
+      src="{{ product.featured_image | image_url: width: 500 }}"
+      alt="{{ product.title }}"
+      width="500"
+      height="500"
+    >
+
+    <h3>{{ product.title }}</h3>
+
+    <p>{{ product.price | money }}</p>
+
+    <p>{{ product.description | strip_html | truncate: 150 }}</p>
+
+    <a href="{{ product.url }}" class="button">
+      View Product
+    </a>
+  </div>
+</dialog>
 
 {% # Title and price for the zoomed out grid view %}
 <div class="product-grid-view-zoom-out--details">

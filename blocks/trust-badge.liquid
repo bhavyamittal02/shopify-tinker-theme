@@ -1,0 +1,33 @@
+
+<div class="badge-container">
+  {% comment %} {% for block in section.blocks %} {% endcomment %}
+    <div class="image-wrapper">
+      <img src="{{ block.settings.trust-badge | image_url }}" alt="trust-badge" width="300px" height="auto">
+    </div>
+  {% comment %} {% endfor %} {% endcomment %}
+</div>
+<style>
+    .image-wrapper{
+        width: 50px;
+        height: auto;
+        {% comment %} border-radius: 20px; {% endcomment %}
+    }
+</style>
+
+{% schema %}
+{
+    "name": "trust-badge",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "trust-badge",
+            "label": "trust-badge"
+        }
+    ],
+    "presets": [
+        {
+            "name": "trust-badge"
+        }
+    ]
+}
+{% endschema %}

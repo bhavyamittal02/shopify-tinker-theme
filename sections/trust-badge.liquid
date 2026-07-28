@@ -1,0 +1,35 @@
+<style>
+    .image-wrapper{
+        width: 100px;
+        height: auto;
+        {% comment %} border-radius: 20px; {% endcomment %}
+    }
+</style>
+
+<div class="badge-container">
+  {% for block in section.blocks %}
+    <div class="image-wrapper">
+      <img src="{{ block.settings.badge | image_url }}" alt="trust-badge" width="300px" height="auto">
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+    "name": "Trust-Badge",
+    "blocks": [{
+        "type" : "badge",
+        "name" : "Badge",
+        "settings" : [{
+            "type": "image_picker",
+            "id": "badge",
+            "label" : "Badge"
+        }]
+    }],
+    "presets": [
+        {
+            "name": "Trust-Badge"
+        }
+    ]
+}
+{% endschema %}

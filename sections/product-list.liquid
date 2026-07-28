@@ -1,5 +1,4 @@
 
-
 {% liquid
   assign max_items = section.settings.max_products
   if section.settings.background_color != blank
@@ -57,9 +56,10 @@
             {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: null %}
         </div>
 
+
         {% unless forloop.last %}
           <!--@list/split-->
-        {% endunless %}
+        {% endunless %} 
       {% endfor %}
     {% endif %}
   {% endcapture %}
